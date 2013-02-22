@@ -1,0 +1,2124 @@
+<?xml version="1.0"?>
+<objects>
+<!-- ('', 'zport', 'dmd', 'Devices', 'rrdTemplates', 'Neo4j') -->
+<object id='/zport/dmd/Devices/rrdTemplates/Neo4j' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
+<property type="string" id="targetPythonClass" mode="w" >
+Products.ZenModel.Device
+</property>
+<tomanycont id='datasources'>
+<object id='Neo4j Configuration ArrayBlockSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Configuration
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+array_block_size
+</property>
+<tomanycont id='datapoints'>
+<object id='array_block_size' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Configuration LuceneSearcherCacheSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Configuration
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+lucene_searcher_cache_size
+</property>
+<tomanycont id='datapoints'>
+<object id='lucene_searcher_cache_size' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Configuration NodeCacheArrayFraction' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Configuration
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+node_cache_array_fraction
+</property>
+<tomanycont id='datapoints'>
+<object id='node_cache_array_fraction' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Configuration RelationshipCacheArrayFraction' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Configuration
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+relationship_cache_array_fraction
+</property>
+<tomanycont id='datapoints'>
+<object id='relationship_cache_array_fraction' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Configuration RelationshipGrabSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Configuration
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+relationship_grab_size
+</property>
+<tomanycont id='datapoints'>
+<object id='relationship_grab_size' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Configuration StringBlockSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Configuration
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+string_block_size
+</property>
+<tomanycont id='datapoints'>
+<object id='string_block_size' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Locking NumberOfAdvertedDeadlocks' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Locking
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfAdvertedDeadlocks
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfAdvertedDeadlocks' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j NodeCache CacheSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Cache,name0=NodeCache
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+CacheSize
+</property>
+<tomanycont id='datapoints'>
+<object id='NodeCache_CacheSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j NodeCache HitCount' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Cache,name0=NodeCache
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+HitCount
+</property>
+<tomanycont id='datapoints'>
+<object id='NodeCache_HitCount' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j NodeCache MissCount' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Cache,name0=NodeCache
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+MissCount
+</property>
+<tomanycont id='datapoints'>
+<object id='NodeCache_MissCount' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j PrimitiveCount NumberOfNodeIdsInUse' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Primitive count
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfNodeIdsInUse
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfNodesInUse' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j PrimitiveCount NumberOfPropertyIdsInUse' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Primitive count
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfPropertyIdsInUse
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfPropertyIdsInUse' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j PrimitiveCount NumberOfRelationshipIdsInUse' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Primitive count
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfRelationshipIdsInUse
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfRelationshipIdsInUse' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j PrimitiveCount NumberOfRelationshipTypeIdsInUse' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Primitive count
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfRelationshipTypeIdsInUse
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfRelationshipTypeIdsInUse' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j RelationshipCache CacheSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Cache,name0=RelationshipCache
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+CacheSize
+</property>
+<tomanycont id='datapoints'>
+<object id='RelationshipCache_CacheSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j RelationshipCache HitCount' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Cache,name0=RelationshipCache
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+HitCount
+</property>
+<tomanycont id='datapoints'>
+<object id='RelationshipCache_HitCount' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j RelationshipCache MissCount' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Cache,name0=RelationshipCache
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+MissCount
+</property>
+<tomanycont id='datapoints'>
+<object id='RelationshipCache_MissCount' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes ArrayStoreSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+ArrayStoreSize
+</property>
+<tomanycont id='datapoints'>
+<object id='ArrayStoreSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes LogicalLogSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+LogicalLogSize
+</property>
+<tomanycont id='datapoints'>
+<object id='LogicalLogSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes NodeStoreSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NodeStoreSize
+</property>
+<tomanycont id='datapoints'>
+<object id='NodeStoreSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes PropertyStoreSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+PropertyStoreSize
+</property>
+<tomanycont id='datapoints'>
+<object id='PropertyStoreSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes RelationshipStoreSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+RelationshipStoreSize
+</property>
+<tomanycont id='datapoints'>
+<object id='RelationshipStoreSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes StringStoreSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+StringStoreSize
+</property>
+<tomanycont id='datapoints'>
+<object id='StringStoreSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j StoreFileSizes TotalStoreSize' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Store file sizes
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+TotalStoreSize
+</property>
+<tomanycont id='datapoints'>
+<object id='TotalStoreSize' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Transactions LastCommittedTxId' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Transactions
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+LastCommittedTxId
+</property>
+<tomanycont id='datapoints'>
+<object id='LastCommittedTxId' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Transactions NumberOfCommittedTransactions' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Transactions
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfCommittedTransactions
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfCommittedTransactions' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Transactions NumberOfOpenTransactions' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Transactions
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfOpenTransactions
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfOpenTransactions' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Transactions NumberOfOpenedTransactions' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Transactions
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfOpenedTransactions
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfOpenedTransactions' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Transactions NumberOfRolledBackTransactions' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Transactions
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+NumberOfRolledBackTransactions
+</property>
+<tomanycont id='datapoints'>
+<object id='NumberOfRolledBackTransactions' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Transactions PeakNumberOfConcurrentTransactions' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=Transactions
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+PeakNumberOfConcurrentTransactions
+</property>
+<tomanycont id='datapoints'>
+<object id='PeakNumberOfConcurrentTransactions' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j XAResources XaResources' module='ZenPacks.zenoss.ZenJMX.datasources.JMXDataSource' class='JMXDataSource'>
+<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
+JMX
+</property>
+<property type="boolean" id="enabled" mode="w" >
+True
+</property>
+<property type="string" id="component" mode="w" >
+JMX
+</property>
+<property type="string" id="eventClass" mode="w" >
+/Status/JMX
+</property>
+<property type="int" id="severity" mode="w" >
+3
+</property>
+<property type="int" id="cycletime" mode="w" >
+300
+</property>
+<property type="string" id="jmxPort" mode="w" >
+${here/zJmxManagementPort}
+</property>
+<property type="string" id="jmxProtocol" mode="w" >
+RMI
+</property>
+<property type="string" id="rmiContext" mode="w" >
+jmxrmi
+</property>
+<property type="string" id="objectName" mode="w" >
+org.neo4j:instance=kernel#0,name=XA Resources
+</property>
+<property type="string" id="authenticate" mode="w" >
+${here/zJmxAuthenticate}
+</property>
+<property type="string" id="username" mode="w" >
+${here/zJmxUsername}
+</property>
+<property type="string" id="password" mode="w" >
+${here/zJmxPassword}
+</property>
+<property type="string" id="attributeName" mode="w" >
+XaResources
+</property>
+<tomanycont id='datapoints'>
+<object id='XaResources.branchId' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+<object id='XaResources.lastTxId' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
+<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
+GAUGE
+</property>
+<property type="boolean" id="isrow" mode="w" >
+True
+</property>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+<tomanycont id='graphDefs'>
+<object id='Neo4j AdvertedDeadLocks' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+500
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+-1
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<tomanycont id='graphPoints'>
+<object id='NumberOfAdvertedDeadlocks' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j Locking NumberOfAdvertedDeadlocks_NumberOfAdvertedDeadlocks
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j CacheSize' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+500
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+-1
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<tomanycont id='graphPoints'>
+<object id='NodeCache_CacheSize' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j NodeCache CacheSize_NodeCache_CacheSize
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='RelationshipCache_CacheSize' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j RelationshipCache CacheSize_RelationshipCache_CacheSize
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j Configuration RelationshipGrabSize' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+500
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+-1
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+5
+</property>
+<tomanycont id='graphPoints'>
+<object id='relationship_grab_size' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j Configuration RelationshipGrabSize_relationship_grab_size
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j NodeAndRelationship Store' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+500
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+-1
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+3
+</property>
+<tomanycont id='graphPoints'>
+<object id='NodeStoreSize' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j StoreFileSizes NodeStoreSize_NodeStoreSize
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='RelationshipStoreSize' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j StoreFileSizes RelationshipStoreSize_RelationshipStoreSize
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j NodesAndRelationships' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+500
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+-1
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+2
+</property>
+<tomanycont id='graphPoints'>
+<object id='NumberOfNodesInUse' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j PrimitiveCount NumberOfNodeIdsInUse_NumberOfNodesInUse
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+<object id='NumberOfRelationshipIdsInUse' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+1
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j PrimitiveCount NumberOfRelationshipIdsInUse_NumberOfRelationshipIdsInUse
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+<object id='Neo4j OpenedTransactions' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
+<property type="int" id="height" mode="w" >
+100
+</property>
+<property type="int" id="width" mode="w" >
+500
+</property>
+<property type="boolean" id="log" mode="w" >
+False
+</property>
+<property type="boolean" id="base" mode="w" >
+False
+</property>
+<property type="int" id="miny" mode="w" >
+-1
+</property>
+<property type="int" id="maxy" mode="w" >
+-1
+</property>
+<property type="boolean" id="hasSummary" mode="w" >
+True
+</property>
+<property type="long" id="sequence" mode="w" >
+4
+</property>
+<tomanycont id='graphPoints'>
+<object id='NumberOfOpenedTransactions' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
+<property type="long" id="sequence" mode="w" >
+0
+</property>
+<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
+LINE
+</property>
+<property type="long" id="lineWidth" mode="w" >
+1
+</property>
+<property type="boolean" id="stacked" mode="w" >
+False
+</property>
+<property type="string" id="format" mode="w" >
+%5.2lf%s
+</property>
+<property type="string" id="legend" mode="w" >
+${graphPoint/id}
+</property>
+<property type="long" id="limit" mode="w" >
+-1
+</property>
+<property type="string" id="dpName" mode="w" >
+Neo4j Transactions NumberOfOpenedTransactions_NumberOfOpenedTransactions
+</property>
+<property type="string" id="cFunc" mode="w" >
+AVERAGE
+</property>
+</object>
+</tomanycont>
+</object>
+</tomanycont>
+</object>
+</objects>
